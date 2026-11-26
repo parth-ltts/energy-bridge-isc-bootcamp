@@ -1,0 +1,24 @@
+{
+  "url": "https://westeurope-1.cognitedata.com/api/v1/projects/cdf-bootcamp-06-test/files/uploadlink",
+  "method": "POST",
+  "requestBody": {
+    "items": [
+      {
+        "instanceId": {
+          "space": "sp_isc_platform",
+          "externalId": "fn_btp_hierarchy"
+        }
+      }
+    ]
+  },
+  "errorMessage": "Request failed with status code 400: File instance ids not found: InstanceId{space=sp_isc_platform, externalId=fn_btp_hierarchy} | Missing: [{'instanceId': {'space': 'sp_isc_platform', 'externalId': 'fn_btp_hierarchy'}}] | X-Request-ID: 3dda12b0-1929-915e-8306-60ec05971a47",
+  "statusCode": 400,
+  "missing": [
+    {
+      "instanceId": {
+        "space": "sp_isc_platform",
+        "externalId": "fn_btp_hierarchy"
+      }
+    }
+  ]
+}
