@@ -60,7 +60,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Verify Toolkit authorization
-        run: cdf auth verify
+        run: cdf auth verify --no-prompt
 
       - name: Build Toolkit configurations
         run: cdf build --config-yaml config.${{ matrix.environment }}.yaml
