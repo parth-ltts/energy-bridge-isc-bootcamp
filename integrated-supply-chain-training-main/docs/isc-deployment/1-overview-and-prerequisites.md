@@ -40,6 +40,8 @@ For this training use case, that's a deliberate scope: the 5 built core domains 
 
 - A CDF project with **Cognite Functions** activated — request it if it isn't already; allow up to ~2 hours.
 - The service principal must belong to exactly one CDF group named `cognite_toolkit_service_principal`. Give that group the capabilities required for every resource kind this repo manages, scoped to all resources. This includes data modeling, RAW, transformations, files, functions, sessions, workflows, and any capability your CDF version requires for Agents, since `isc_atlas_agents` ships `Agent` resources.
+
+  The current Toolkit authorization check also requires these all-resource capabilities: `appConfigAcl` (`READ`, `WRITE`), `extractionConfigsAcl` (`READ`, `WRITE`), `simulatorsAcl` (`DELETE`, `MANAGE`, `READ`, `WRITE`), and `streamsAcl` (`CREATE`, `DELETE`, `READ`).
 - `.env` set up for [`client_credentials`](https://docs.cognite.com/cdf/deploy/cdf_toolkit/guides/auth#client_credentials) — the same as any Toolkit project — plus one ISC-specific variable with no fallback:
 
   ```text
